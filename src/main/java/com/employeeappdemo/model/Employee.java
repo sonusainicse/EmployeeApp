@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+// this is my entity class
+
 //@Data   // by using this annotation we need not to construct getters and setters and toString method
 @Entity // This annotation is used for defining it as an Entity
 @Table(name="emp") // it is used to make it as table as employee.
