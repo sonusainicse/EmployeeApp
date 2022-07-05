@@ -1,0 +1,28 @@
+#version of this docker-compose file
+version: "3"
+# In this services property we can define multiple services 
+services:
+ employeeapp: # this is the name of service we can give any name
+  container_name: employeeapp
+  image: springboot-app # this is the image name 
+  build: .   
+  ports: 
+    - 8080:8080
+  environment: 
+   MYSQL_HOST: mysqldb
+   MYSQL_USER: root
+   MYSQL_PASSWORD: root
+   MYSQL_PORT: 3306
+   
+# this is another service with name mysqldb
+ mysqldb:
+  container_name: mysqldb
+  image: "mysql"
+  volumes: 
+   - C:\Users\mindc1may384\Desktop/db:/var/lib/mysql 
+  ports: 
+    - 3308:3306
+  environment:
+   MYSQL_DATABASE: ems
+   MYSQL_ROOT_PASSWORD: root  
+  
