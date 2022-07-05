@@ -7,7 +7,7 @@ services:
   image: springboot-app # this is the image name 
   build: .   
   ports: 
-    - 8081:8080
+    - 8082:8081
   environment: 
    MYSQL_HOST: mysqldb
    MYSQL_USER: root
